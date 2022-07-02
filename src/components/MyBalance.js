@@ -14,11 +14,11 @@ const Mybalance = (props) => {
         <div className="text-white flex my-3">
           <div className="flex-1">
             <div className="flex justify-center">SHADOW</div>
-            <div className="flex justify-center">0.000000</div>
+            <div className="flex justify-center">{props.myShadow}</div>
           </div>
           <div className="flex-1">
-            <div className="flex justify-center">xSHADOW</div>
-            <div className="flex justify-center">0.000000</div>
+            <div className="flex justify-center">SHADOW in Staking</div>
+            <div className="flex justify-center">{props.myXShadow}</div>
           </div>
         </div>
         
@@ -45,7 +45,7 @@ const Mybalance = (props) => {
                     border rounded-2xl bg-transparent content-right w-full my-input h-10"></input>
                     <div className="shadow-lbl">Shadow</div>
                   </div>
-                  <button className="rounded-xl bg-[#323232] text-[15px] p-1">Max</button>
+                  <button className="rounded-xl bg-[#323232] text-[15px] p-1" onClick={props.setMaxStake}>Max</button>
                 </div>
                 <div className="flex justify-center">
                   <div className="button-container py-1 px-3 border">
@@ -60,9 +60,9 @@ const Mybalance = (props) => {
                   <div className="flex flex-grow relative items-center">
                     <input ref={props.xtokenAmount} placeholder="0.00" min='0' step='0.1' type='number' data-testid='input' className="
                     border rounded-2xl bg-transparent content-right w-full my-input h-10"></input>
-                    <div className="shadow-lbl">xShadow</div>
+                    <div className="shadow-lbl">Shadow</div>
                   </div>
-                  <button className="rounded-xl bg-[#323232] text-[15px] p-1">Max</button>
+                  <button className="rounded-xl bg-[#323232] text-[15px] p-1" onClick={props.setMaxUnstake}>Max</button>
                 </div>
                 <div className="flex justify-center">
                   <div className="button-container py-1 px-3 border">

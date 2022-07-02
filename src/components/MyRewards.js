@@ -1,6 +1,6 @@
 import React from "react";
 
-const Myrewards = () => {
+const Myrewards = (props) => {
   return (
     <div className=" md:mx-auto rounded-xl border my-3">
       <div className="">
@@ -14,11 +14,11 @@ const Myrewards = () => {
         <div className="text-white flex my-3">
           <div className="flex-1">
             <div className="flex justify-center">Current Shadow Amount</div>
-            <div className="flex justify-center">0.000000</div>
+            <div className="flex justify-center">{props.curShadow}</div>
           </div>
           <div className="flex-1">
-            <div className="flex justify-center">Est Shadow per day</div>
-            <div className="flex justify-center">0.000000</div>
+            <div className="flex justify-center">Time Remaining</div>
+            <div className="flex justify-center">{props.estPerDay} MIN</div>
           </div>
         </div>
       </div>

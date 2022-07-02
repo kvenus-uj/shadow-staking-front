@@ -1,6 +1,7 @@
 import React from "react";
+import { propTypes } from "react-bootstrap/esm/Image";
 
-const Poolinfo = () => {
+const Poolinfo = (props) => {
   return (
     <div className=" md:mx-auto rounded-xl border">
       <div className="">
@@ -14,11 +15,11 @@ const Poolinfo = () => {
         <div className="text-white flex my-3">
           <div className="flex-1">
             <div className="flex justify-center">Total Shadow Staked</div>
-            <div className="flex justify-center">445282</div>
+            <div className="flex justify-center">{props.totalStaked}</div>
           </div>
           <div className="flex-1">
-            <div className="flex justify-center">Est APR</div>
-            <div className="flex justify-center">17%</div>
+            <div className="flex justify-center">Locked Time</div>
+            <div className="flex justify-center">{props.estApr}</div>
           </div>
         </div>
       </div>
